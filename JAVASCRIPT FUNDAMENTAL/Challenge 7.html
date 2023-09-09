@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        const mark = {
+            fullName: "Mark Miller",
+            mass: 78,
+            height: 1.69,
+            calcBMI: function ()
+            {
+                this.bmi = this.mass / (this.height ** 2);
+                return this.bmi;
+            }
+        };
+
+        const john = {
+            fullName: "John Smith",
+            mass: 92,
+            height: 1.95,
+            calcBMI: function ()
+            {
+                this.bmi = this.mass / (this.height ** 2);
+                return this.bmi;
+            }
+        };
+
+        mark.calcBMI();
+        john.calcBMI();
+
+        if (mark.bmi > john.bmi)
+        {
+            console.log("chỉ số BMI của " + mark.fullName + " (" + mark.bmi + ")" + " cao hơn " + john.fullName + "(" + john.bmi + ")");
+        }
+        else if(mark.bmi < john.bmi)
+        {
+            console.log("chỉ số BMI của " + john.fullName + " (" + john.bmi + ")" + " cao hơn " + mark.fullName + "(" + mark.bmi + ")");
+        }
+        else
+        {
+            console.log(mark.fullName + " và " + john.fullName + " có cùng chỉ số BMI: " + mark.bmi);
+        }
+    </script>
+</body>
+</html>

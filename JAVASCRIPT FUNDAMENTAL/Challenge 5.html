@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data1Do = [44, 23, 71];
+        const data1Ko = [65, 54, 49];
+
+        const data2Do = [85, 54, 41];
+        const data2Ko = [23, 34, 27];
+
+        //1
+        function calcAverage(data)
+        {
+            return (data[0] + data[1] + data[2])/3;
+        }
+
+        function checkWinner(avgDo, avgKo)
+        {
+            if (avgDo > avgKo)
+            {
+                console.log("Dolphins chiến thắng ("+ avgDo + " so với " + avgKo + ")");
+            }
+            else
+            {
+                console.log("Koalas chiến thắng ("+ avgKo + " so với " + avgDo + ")");
+            }
+        }
+
+        console.log("=======Test data 1 ============");
+        var avgD = calcAverage(data1Do);
+        var avgK = calcAverage(data1Ko);
+        checkWinner(avgD, avgK);
+
+        console.log("=======Test data 2 ============");
+        var avgD = calcAverage(data2Do);
+        var avgK = calcAverage(data2Ko);
+        checkWinner(avgD, avgK);
+    </script>
+</body>
+</html>

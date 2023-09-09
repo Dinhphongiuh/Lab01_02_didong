@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data1Do = [96, 108, 89];
+        const data1Ko = [88, 91, 110];
+
+        const data1BonusDo = [97, 112, 101];
+        const data1BonusKo = [109, 95, 123];
+
+        const data2BonusDo = [97, 112, 101];
+        const data2BonusKo = [109, 95, 106];
+
+        //1
+        function mediumScore(data)
+        {
+            return (data[0] + data[1] + data[2])/3;
+        }
+
+        console.log("=============== data 1 ========");
+        //2
+        if (mediumScore(data1Do) > mediumScore(data1Ko))
+        {
+            console.log("đội Dolphins chiến thắng với số điểm: " + mediumScore(data1Do) + "đội Koalas có số điểm: " + mediumScore(data1Ko));
+        }
+        else if (mediumScore(data1Do) < mediumScore(data1Ko))
+        {
+            console.log("đội Dolphins chiến thắng thua với số điểm: " + mediumScore(data1Do) + "đội Koalas có số điểm: " + mediumScore(data1Ko));
+        }
+        else if (mediumScore(data1Do) == mediumScore(data1Ko))
+        {
+            console.log("đội Dolphins hoà với số điểm: " + mediumScore(data1Do) + "đội Koalas có số điểm: " + mediumScore(data1Ko));
+        }
+
+        //3
+        console.log("Data Bonus 1");
+
+        if (mediumScore(data1BonusDo) > 100 && mediumScore(data1BonusDo) > mediumScore(data1BonusKo))
+        {
+            console.log("đội Dolphins chiến thắng với số điểm: " + mediumScore(data1BonusDo) + "đội Koalas có số điểm: " + mediumScore(data1BonusKo));
+        }
+        else if (mediumScore(data1BonusKo) > 100 && mediumScore(data1BonusKo) > mediumScore(data1BonusDo))
+        {
+            console.log("đội Koalas chiến thắng với số điểm: " + mediumScore(data1BonusKo) + "đội Dolphins có số điểm: " + mediumScore(data1BonusDo));
+        }
+        else
+            console.log("không có đội nào chiến thắng vì số điểm cả 2 đội < 100")
+
+        //3
+        console.log("Data Bonus 2");
+
+        if (mediumScore(data2BonusDo) > 100 && mediumScore(data2BonusDo) > mediumScore(data2BonusKo))
+        {
+            console.log("đội Dolphins chiến thắng với số điểm: " + mediumScore(data2BonusDo) + "đội Koalas có số điểm: " + mediumScore(data2BonusKo));
+        }
+        else if (mediumScore(data2BonusKo) > 100 && mediumScore(data2BonusKo) > mediumScore(data2BonusDo))
+        {
+            console.log("đội Koalas chiến thắng với số điểm: " + mediumScore(data2BonusKo) + "đội Dolphins có số điểm: " + mediumScore(data2BonusDo));
+        }
+        else
+            console.log("không có đội nào chiến thắng vì số điểm cả 2 đội < 100")
+    </script>
+</body>
+</html>

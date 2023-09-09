@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data1M = [78, 1.69];
+        const data1J = [92, 1.95];
+
+        const data2M = [95, 1.88];
+        const data2J = [85, 1.76];
+
+        var massM;
+        var heightM;
+        var massJ;
+        var heightJ;
+
+        function BMI(mass, height) {
+            return mass / (height * height);
+        }
+
+        var markHigherBMI = function checl(BMIM, BMIJ) {
+            if (BMIM > BMIJ)
+                return true;
+            else
+                return false;
+        }
+
+
+        massM = data1M[0];
+        heightM = data1M[1];
+
+        massJ = data1J[0];
+        heightJ = data1J[1];
+
+        var BMIM = BMI(massM, heightM)
+        var BMIJ = BMI(massJ, heightJ);
+        // console.log("BMI Mark = " + BMIM);
+        // console.log("BMI John = " + BMIJ);
+        // console.log(markHigherBMI(BMIM, BMIJ));
+
+        massM = data2M[0];
+        heightM = data2M[1];
+
+        massJ = data2J[0];
+        heightJ = data2J[1];
+        var BMIM = BMI(massM, heightM)
+        var BMIJ = BMI(massJ, heightJ);
+        // console.log("BMI Mark = " + BMIM);
+        // console.log("BMI John = " + BMIJ);
+        // console.log(markHigherBMI(BMIM, BMIJ));
+
+        if (markHigherBMI(BMIM, BMIJ))
+        {
+            console.log("chỉ số BMI của Mark cao hơn John");
+            console.log("Mark BMI (" + BMIM + ") cao hơn John (" + BMIJ +")");
+        }
+        else
+            console.log("chỉ số BMI của John cao hơn của Mark");
+            console.log("John BMI (" + BMIJ + ") cao hơn Mark (" + BMIM +")");
+    </script>
+</body>
+</html>

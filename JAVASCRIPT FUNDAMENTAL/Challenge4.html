@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data1 = [275.40, 430];
+        
+        var bill = data1[0];
+        var tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+        console.log("giá trị hoá đơn: " + data1[0] + ", tiền tip: " + tip + ", tổn giá trị là: " + (tip + bill));
+
+        var bill = data1[1];
+        var tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+        console.log("giá trị hoá đơn: " + data1[1] + ", tiền tip: " + tip + ", tổn giá trị là: " + (tip + bill));
+    </script>    
+</body>
+</html>
